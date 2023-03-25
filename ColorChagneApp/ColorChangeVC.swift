@@ -20,7 +20,6 @@ final class ColorChangeVC: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
     
-    
     // MARK: - Life circle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,20 +33,21 @@ final class ColorChangeVC: UIViewController {
     
     override func viewWillLayoutSubviews() {
         colorView.layer.cornerRadius = colorView.frame.height / 10
-        
     }
 
     // MARK: - Actions
     @IBAction func colorChangeDrag(_ sender: UISlider) {
+        let valueWithTwoSigns = String(format: "%.2f", sender.value)
+        
         switch sender.restorationIdentifier {
         case ColorRGB.red.rawValue:
-            redValueLabel.text = String(format: "%.2f", sender.value)
+            redValueLabel.text = valueWithTwoSigns
             redSlider.value = sender.value
         case ColorRGB.green.rawValue:
-            greenValueLabel.text = String(format: "%.2f", sender.value)
+            greenValueLabel.text = valueWithTwoSigns
             greenSlider.value = sender.value
         default:
-            blueValueLabel.text = String(format: "%.2f", sender.value)
+            blueValueLabel.text = valueWithTwoSigns
             blueSlider.value = sender.value
         }
         
