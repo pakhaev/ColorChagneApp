@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ColorChangeVC: UIViewController {
+final class SettingsViewController: UIViewController {
 
     // MARK: - Outlets
     @IBOutlet var colorView: UIView!
@@ -20,15 +20,24 @@ final class ColorChangeVC: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
     
+    var color: UIColor!
+    
+    unowned var delegate: SettingsViewControllerDelegate!
+    
     // MARK: - Life circle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        redValueLabel.text = string(redSlider.value)
-        greenValueLabel.text = string(greenSlider.value)
-        blueValueLabel.text = string(blueSlider.value)
+        redValueLabel.text = string(Float(color.getRGBA.red))
+        greenValueLabel.text = string(Float(color.getRGBA.green))
+        blueValueLabel.text = string(Float(color.getRGBA.blue))
+        
+        redSlider.value = color.getRGBA.red
+        greenSlider.value = color.getRGBA.green
+        blueSlider.value = color.getRGBA.blue
         
         setupColorView()
+        
     }
     
     override func viewWillLayoutSubviews() {
@@ -55,13 +64,14 @@ final class ColorChangeVC: UIViewController {
     
     
     @IBAction func doneTappedButton() {
+        delegate.setBackground(for: colorView.backgroundColor!)
         dismiss(animated: true)
     }
     
 }
 
 // MARK: - Extension View Setup
-extension ColorChangeVC {
+extension SettingsViewController {
     func setupColorView() {
         colorView.backgroundColor = UIColor(
             red: CGFloat(redSlider.value),
@@ -76,3 +86,17 @@ extension ColorChangeVC {
     }
 }
 
+extension UIColor {
+    
+    var getRGBA: (red: Float, green: Float, blue: Float, alpha: Float) {
+        var red: CGFloat = 0
+        var green: CGFloat = 0
+        var blue: CGFloat = 0
+        var alpha: CGFloat = 0
+        
+        getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+
+        return (Float(red), Float(green), Float(blue), Float(alpha))
+    }
+
+}

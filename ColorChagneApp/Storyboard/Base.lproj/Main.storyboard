@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="zZf-oy-G59">
             <objects>
-                <viewController id="UsU-sf-Dnx" sceneMemberID="viewController">
+                <viewController id="UsU-sf-Dnx" customClass="MainViewController" customModule="ColorChagneApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZT1-FW-qaK">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,30 +21,31 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="mVL-T8-7o0">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="slider.horizontal.3" catalog="system" id="dx5-gs-JND"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="slider.horizontal.3" catalog="system" id="dx5-gs-JND">
+                            <connections>
+                                <segue destination="TWp-hH-Ah0" kind="presentation" modalPresentationStyle="fullScreen" id="nQr-d0-BSJ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="TWp-hH-Ah0" kind="show" id="Pq4-YQ-jFc"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xdT-Z5-ZAE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="141.22137404580153" y="-29.577464788732396"/>
         </scene>
-        <!--Color ChangeVC-->
+        <!--Settings View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ColorChangeVC" customModule="ColorChagneApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SettingsViewController" customModule="ColorChagneApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WBW-Dd-Tcg">
-                                <rect key="frame" x="16" y="143" width="361" height="173.33333333333337"/>
+                                <rect key="frame" x="16" y="84.000000000000014" width="361" height="173.33333333333337"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Awt-0m-8zo">
-                                <rect key="frame" x="16" y="347.66666666666669" width="361" height="128"/>
+                                <rect key="frame" x="16" y="288.66666666666669" width="361" height="128"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Frr-Q7-ieT">
                                         <rect key="frame" x="0.0" y="0.0" width="93.333333333333329" height="128"/>
@@ -97,7 +98,7 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="amN-qV-0wb">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="amN-qV-0wb">
                                         <rect key="frame" x="100.33333333333334" y="0.0" width="260.66666666666663" height="128"/>
                                         <subviews>
                                             <slider opaque="NO" contentMode="scaleToFill" restorationIdentifier="red" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ur6-hz-IIX">
@@ -126,7 +127,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05G-7a-5eH">
-                                <rect key="frame" x="161.66666666666666" y="679" width="70" height="48"/>
+                                <rect key="frame" x="161.66666666666666" y="709.33333333333337" width="70" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Done">
@@ -191,7 +192,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="z2O-Ke-wAf"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3kd-eb-ryz">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
