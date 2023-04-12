@@ -50,9 +50,14 @@ final class ColorChangeVC: UIViewController {
             blueValueLabel.text = valueWithTwoSigns
             blueSlider.value = sender.value
         }
-        
         setupColorView()
     }
+    
+    
+    @IBAction func doneTappedButton() {
+        dismiss(animated: true)
+    }
+    
 }
 
 
