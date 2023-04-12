@@ -58,16 +58,24 @@
 		E0014BC929CD7E9300BB98E0 /* ColorChagneApp */ = {
 			isa = PBXGroup;
 			children = (
-				E0014BCA29CD7E9300BB98E0 /* AppDelegate.swift */,
+				E09FFF4529E6C735000401CE /* App */,
 				E0FF72DC29CFA3E800C99EDC /* Extensions + ColorChangeVC.swift */,
 				E0FF72DE29CFA43700C99EDC /* ColorChangeVC.swift */,
 				E0014BD329CD7E9700BB98E0 /* Assets.xcassets */,
-				E0014BCC29CD7E9300BB98E0 /* SceneDelegate.swift */,
 				E0014BD029CD7E9300BB98E0 /* Main.storyboard */,
 				E0014BD529CD7E9700BB98E0 /* LaunchScreen.storyboard */,
-				E0014BD829CD7E9700BB98E0 /* Info.plist */,
 			);
 			path = ColorChagneApp;
+			sourceTree = "<group>";
+		};
+		E09FFF4529E6C735000401CE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E0014BCA29CD7E9300BB98E0 /* AppDelegate.swift */,
+				E0014BCC29CD7E9300BB98E0 /* SceneDelegate.swift */,
+				E0014BD829CD7E9700BB98E0 /* Info.plist */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,7 +301,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C87Q7272PH;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ColorChagneApp/Info.plist;
+				INFOPLIST_FILE = ColorChagneApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -324,7 +332,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C87Q7272PH;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ColorChagneApp/Info.plist;
+				INFOPLIST_FILE = ColorChagneApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
