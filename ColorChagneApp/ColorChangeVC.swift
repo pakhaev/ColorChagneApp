@@ -24,9 +24,9 @@ final class ColorChangeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        redValueLabel.text = String(format: "%.2f", redSlider.value)
-        greenValueLabel.text = String(format: "%.2f", greenSlider.value)
-        blueValueLabel.text = String(format: "%.2f", blueSlider.value)
+        redValueLabel.text = string(redSlider.value)
+        greenValueLabel.text = string(greenSlider.value)
+        blueValueLabel.text = string(blueSlider.value)
         
         setupColorView()
     }
@@ -37,13 +37,13 @@ final class ColorChangeVC: UIViewController {
 
     // MARK: - Actions
     @IBAction func colorChangeDrag(_ sender: UISlider) {
-        let valueWithTwoSigns = String(format: "%.2f", sender.value)
+        let valueWithTwoSigns = string(sender.value)
         
-        switch sender.restorationIdentifier {
-        case ColorRGB.red.rawValue:
+        switch sender {
+        case redSlider:
             redValueLabel.text = valueWithTwoSigns
             redSlider.value = sender.value
-        case ColorRGB.green.rawValue:
+        case greenSlider:
             greenValueLabel.text = valueWithTwoSigns
             greenSlider.value = sender.value
         default:
@@ -60,4 +60,18 @@ final class ColorChangeVC: UIViewController {
     
 }
 
+extension ColorChangeVC {
+    func setupColorView() {
+        colorView.backgroundColor = UIColor(
+            red: CGFloat(redSlider.value),
+            green: CGFloat(greenSlider.value),
+            blue: CGFloat(blueSlider.value),
+            alpha: 1
+        )
+    }
+    
+    func string(_ value: Float) -> String {
+        String(format: "%.2f", value)
+    }
+}
 
