@@ -60,6 +60,7 @@ final class ColorChangeVC: UIViewController {
     
 }
 
+// MARK: - Extension View Setup
 extension ColorChangeVC {
     func setupColorView() {
         colorView.backgroundColor = UIColor(
