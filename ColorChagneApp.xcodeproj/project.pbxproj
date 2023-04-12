@@ -12,7 +12,6 @@
 		E0014BD229CD7E9300BB98E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0014BD029CD7E9300BB98E0 /* Main.storyboard */; };
 		E0014BD429CD7E9700BB98E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0014BD329CD7E9700BB98E0 /* Assets.xcassets */; };
 		E0014BD729CD7E9700BB98E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0014BD529CD7E9700BB98E0 /* LaunchScreen.storyboard */; };
-		E0FF72DD29CFA3E800C99EDC /* Extensions + ColorChangeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FF72DC29CFA3E800C99EDC /* Extensions + ColorChangeVC.swift */; };
 		E0FF72DF29CFA43800C99EDC /* ColorChangeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FF72DE29CFA43700C99EDC /* ColorChangeVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,7 +23,6 @@
 		E0014BD329CD7E9700BB98E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0014BD629CD7E9700BB98E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0014BD829CD7E9700BB98E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E0FF72DC29CFA3E800C99EDC /* Extensions + ColorChangeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions + ColorChangeVC.swift"; sourceTree = "<group>"; };
 		E0FF72DE29CFA43700C99EDC /* ColorChangeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorChangeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,7 +57,6 @@
 			isa = PBXGroup;
 			children = (
 				E09FFF4529E6C735000401CE /* App */,
-				E0FF72DC29CFA3E800C99EDC /* Extensions + ColorChangeVC.swift */,
 				E0FF72DE29CFA43700C99EDC /* ColorChangeVC.swift */,
 				E0014BD329CD7E9700BB98E0 /* Assets.xcassets */,
 				E0014BD029CD7E9300BB98E0 /* Main.storyboard */,
@@ -151,7 +148,6 @@
 			files = (
 				E0014BCB29CD7E9300BB98E0 /* AppDelegate.swift in Sources */,
 				E0FF72DF29CFA43800C99EDC /* ColorChangeVC.swift in Sources */,
-				E0FF72DD29CFA3E800C99EDC /* Extensions + ColorChangeVC.swift in Sources */,
 				E0014BCD29CD7E9300BB98E0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
