@@ -19,9 +19,9 @@ final class MainViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let navigationVC = segue.destination as? UINavigationController else {return}
-        guard let backgroundVC = navigationVC.topViewController as? SettingsViewController else {
+        let navigation = navigationVC.topViewController
+        guard let backgroundVC = navigation as? SettingsViewController else {
             return
-            
         }
         backgroundVC.color = view.backgroundColor
         backgroundVC.delegate = self
